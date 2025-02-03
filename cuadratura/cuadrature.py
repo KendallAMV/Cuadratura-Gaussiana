@@ -60,7 +60,7 @@ Algunos ejemplos son:
 
 Siendo este último el más acercado al resultado de la integral
 
-Este proyecto posee varias funciones de numpy:
+Este proyecto posee varias funciones de numpy interesantes:
 
 - `np.linspace` - Funciona para hacer listas.
 - `np.pi, np.cos, np.sin` - Argumentos matemáticos, pi,seno y coseno.

@@ -7,7 +7,7 @@ en nuestro caso úsaremos de ejemplo
  \int_{1}^{3} \left( x^6 - x^2 \sin(2x) \right) \, dx
 \end{align} 
 
-Donde si compararemos resultados según la cantidad de subregiones (N) veremos resultados interesantes.
+Donde si comparamos los resultados según la cantidad de subregiones (N) veremos algo interesante.
 
 ## Contenidos
 
