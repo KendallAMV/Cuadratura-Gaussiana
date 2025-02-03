@@ -18,6 +18,7 @@ def gaussxw(N):
             - x (np.ndarray): Un arreglo de puntos de la cuadratura.
             - w (np.ndarray): Un arreglo de pesos correspondientes a esos puntos.
     """
+
     a = np.linspace(3, 4 * (N - 1), N) / ((4 * N) + 2)
     x = np.cos(np.pi * a + 1 / (8 * N * N * np.tan(a)))
 
@@ -53,13 +54,14 @@ def gaussxwab(a, b, x, w):
             - x (np.ndarray): Los puntos escalados al intervalo [a, b].
             - w (np.ndarray): Los pesos escalados correspondientes.
     """
+
     return 0.5 * (b - a) * x + 0.5 * (b + a), 0.5 * (b - a) * w
 
  
-xw = gaussxw(N)
+xw = gaussxw(4)
 
 
-xw_escalado = gaussxwab(a,b, xw[0],xw[1])
+xw_escalado = gaussxwab(1,3, xw[0],xw[1])
 
 
 def func(x):
@@ -75,6 +77,7 @@ def func(x):
     Returns:
         np.ndarray: El valor de la función evaluada en los puntos x.
     """
+
     return x**6-x**2*np.sin(2*x)
 
 
@@ -94,10 +97,11 @@ def sumatoria(xw_escalado, func):
     Returns:
         float: El resultado de la integral aproximada.
     """
+
     result = np.sum(func(xw_escalado[0])*xw_escalado[1])
     return result
 
-print(sumatoria(xw_escalado, func))
+print(f"el resultado con N = 4 (sumatoria(xw_escalado, func))")
 
 
 
