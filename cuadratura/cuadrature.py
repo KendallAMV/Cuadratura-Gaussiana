@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+
 import numpy as np
 
 
@@ -102,6 +102,7 @@ print(sumatoria(xw_escalado, func))
 
 
 """Este proyecto posee varias funciones de numpy interesantes.
+
 Las funciones serían las siguientes:
     
 - `np.linspace` - Funciona para hacer listas.
