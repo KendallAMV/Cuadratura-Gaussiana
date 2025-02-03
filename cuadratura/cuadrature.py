@@ -101,7 +101,7 @@ def sumatoria(xw_escalado, func):
     result = np.sum(func(xw_escalado[0])*xw_escalado[1])
     return result
 
-print(f"el resultado con N = 4 (sumatoria(xw_escalado, func))")
+print( sumatoria(xw_escalado, func))
 
 
 
