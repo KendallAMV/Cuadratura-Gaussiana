@@ -1,5 +1,5 @@
 import numpy as np
-
+from typing import Union
 
 def gaussxw(N):
 """
@@ -34,7 +34,7 @@ def gaussxw(N):
         delta = np.max(np.abs(dx))
 
     w = 2 * (N + 1) * (N + 1)/(N * N * (1 - x * x) * dp * dp)
-    return x,w 
+    return Union(x,w) 
 
 def gaussxwab(a, b, x, w):
     """
@@ -100,7 +100,7 @@ def sumatoria(xw_escalado, func):
     result = np.sum(func(xw_escalado[0])*xw_escalado[1])
     return result
 
-print( sumatoria(xw_escalado, func))
+print(sumatoria(xw_escalado, func))
 
 
 
