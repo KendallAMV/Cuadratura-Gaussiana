@@ -34,6 +34,7 @@ def gaussxw(N):
     w = 2 * (N + 1) * (N + 1)/(N * N * (1 - x * x) * dp * dp)
     return x,w 
 
+"""
 def gaussxwab(a, b, x, w):
     """
     Escala los puntos y pesos de la cuadratura de Gauss-Legendre al intervalo [a, b].
@@ -99,3 +100,12 @@ def sumatoria(xw_escalado, func):
     return result
 
 print(sumatoria(xw_escalado, func))
+"""
+
+
+
+
+
+
+
+
