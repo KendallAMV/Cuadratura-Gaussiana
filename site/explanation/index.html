@@ -353,21 +353,51 @@
 \begin{align}
 \int_{a^b} {\rm{d}}x f(x) \approx \sum_{k=1}^{N+1} w_{k} f(x_{k}).
 \end{align}
-donde:
-  * <span class="arithmatex">\(w_{k}\)</span> son los "pesos"
-  * <span class="arithmatex">\(x_{k}\)</span> son los puntos de muestreo. Nótese que usamos <span class="arithmatex">\(N+1\)</span> puntos (es decir, <span class="arithmatex">\(N\)</span> subregiones o subintervalos)</p>
-<p>Para las ecuaciones de Newton-Cotes de la clase anterior:<br />
-  * Los puntos de muestreo son <strong>equidistantes</strong>.
-  * Una ecuación de Newton-Cotes de orden <span class="arithmatex">\(N\)</span> es <em>exacta</em> (i.e., no hay aproximación) para un polinomio de grado <span class="arithmatex">\(N\)</span>.
-  * Un polinomio de orden <span class="arithmatex">\(N\)</span> aproxima una función bien comportada mejor que un polinomio de orden <span class="arithmatex">\(N-1\)</span>, debido al grado de libertad añadido.</p>
-<p>Por el otro lado, para la cuadratura Gaussiana:
-  * Los puntos de muestreo se escogen de manera tal que <strong>no son equidistantes</strong>. Esto introduce más grados de libertad para la misma discretización en <span class="arithmatex">\(N\)</span> subregiones.
-  * Es exacta para un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.
-  * Es decir, la cuadratura Gaussiana da la misma precisión que un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.</p>
-<p>Existe una <strong>regla universal para escoger <span class="arithmatex">\(w_k\)</span> y <span class="arithmatex">\(x_k\)</span></strong>. Los pesos y puntos de muestreo se eligen tal que:
-  * <span class="arithmatex">\(x_{k}\)</span> corresponden a las <span class="arithmatex">\(N\)</span> raíces (ceros) de los polinomios de Legendre <span class="arithmatex">\(P_{N}(x)\)</span> de orden <span class="arithmatex">\(N\)</span>.
-  * Los pesos se eligen tal que:
-      - <span class="arithmatex">\(\displaystyle w_{k} = \left[\frac{2}{1-x^2}\left(\frac{dP_{N}}{dx}\right)^{-2}\right]_{x={x_k}}\)</span>, con <span class="arithmatex">\(x_k\)</span> que cumple <span class="arithmatex">\(P_N(x_k)=0\)</span></p>
+donde:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(w_{k}\)</span> son los "pesos"</p>
+</li>
+<li>
+<p><span class="arithmatex">\(x_{k}\)</span> son los puntos de muestreo. Nótese que usamos <span class="arithmatex">\(N+1\)</span> puntos (es decir, <span class="arithmatex">\(N\)</span> subregiones o subintervalos)</p>
+</li>
+</ul>
+<p>Para las ecuaciones de Newton-Cotes de la clase anterior:  </p>
+<ul>
+<li>
+<p>Los puntos de muestreo son <strong>equidistantes</strong>.</p>
+</li>
+<li>
+<p>Una ecuación de Newton-Cotes de orden <span class="arithmatex">\(N\)</span> es <em>exacta</em> (i.e., no hay aproximación) para un polinomio de grado <span class="arithmatex">\(N\)</span>.</p>
+</li>
+<li>
+<p>Un polinomio de orden <span class="arithmatex">\(N\)</span> aproxima una función bien comportada mejor que un polinomio de orden <span class="arithmatex">\(N-1\)</span>, debido al grado de libertad añadido.</p>
+</li>
+</ul>
+<p>Por el otro lado, para la cuadratura Gaussiana:</p>
+<ul>
+<li>
+<p>Los puntos de muestreo se escogen de manera tal que <strong>no son equidistantes</strong>. Esto introduce más grados de libertad para la misma discretización en <span class="arithmatex">\(N\)</span> subregiones.</p>
+</li>
+<li>
+<p>Es exacta para un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.</p>
+</li>
+<li>
+<p>Es decir, la cuadratura Gaussiana da la misma precisión que un polinomio de orden <span class="arithmatex">\((2N - 1)\)</span>.</p>
+</li>
+</ul>
+<p>Existe una <strong>regla universal para escoger <span class="arithmatex">\(w_k\)</span> y <span class="arithmatex">\(x_k\)</span></strong>. Los pesos y puntos de muestreo se eligen tal que:</p>
+<ul>
+<li>
+<p><span class="arithmatex">\(x_{k}\)</span> corresponden a las <span class="arithmatex">\(N\)</span> raíces (ceros) de los polinomios de Legendre <span class="arithmatex">\(P_{N}(x)\)</span> de orden <span class="arithmatex">\(N\)</span>.</p>
+</li>
+<li>
+<p>Los pesos se eligen tal que:</p>
+<ul>
+<li><span class="arithmatex">\(\displaystyle w_{k} = \left[\frac{2}{1-x^2}\left(\frac{dP_{N}}{dx}\right)^{-2}\right]_{x={x_k}}\)</span>, con <span class="arithmatex">\(x_k\)</span> que cumple <span class="arithmatex">\(P_N(x_k)=0\)</span></li>
+</ul>
+</li>
+</ul>
 <h2 id="polinomios-de-legendre">Polinomios de Legendre</h2>
 <p>Los polinomios de Legendre son un sistema de polinomios ortogonales que pueden ser definidos de manera recursiva. Tenemos:
 \begin{align}
