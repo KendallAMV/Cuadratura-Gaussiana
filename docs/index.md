@@ -3,7 +3,7 @@
 En este proyecto veremos como usar el método de cuadratura gaussiana para poder calcular fácilmente cualquier integral
 en nuestro caso úsaremos de ejemplo 
 
-\Begin{align}
+\begin{align}
  \int_{1}^{3} \left( x^6 - x^2 \sin(2x) \right) \, dx
 \end{align} 
 
