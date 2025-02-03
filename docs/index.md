@@ -3,9 +3,9 @@
 En este proyecto veremos como usar el método de cuadratura gaussiana para poder calcular fácilmente cualquier integral
 en nuestro caso úsaremos de ejemplo 
 
-\Begin{equiation}
+\Begin{align}
  \int_{1}^{3} \left( x^6 - x^2 \sin(2x) \right) \, dx
-\end{equation} 
+\end{align} 
 
 Donde si compararemos resultados según la cantidad de subregiones (N) veremos resultados interesantes.
 
@@ -18,4 +18,4 @@ Donde si compararemos resultados según la cantidad de subregiones (N) veremos r
 
 ## Descripción del proyecto
 
-::: caudratura
+::: cuadratura

@@ -1,3 +1,3 @@
 # Reference 
 
-:::cuadratura.cuadratura
+:::cuadratura.cuadrature
