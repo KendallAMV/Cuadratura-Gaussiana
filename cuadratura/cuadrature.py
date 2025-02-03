@@ -31,10 +31,10 @@ def gaussxwab(a, b, x, w):
     return 0.5 * (b - a) * x + 0.5 * (b + a), 0.5 * (b - a) * w
 
 """Con el siguiente paso se calculan los puntos y pesos según el N dado""" 
-xw = gaussxw(7)
+xw = gaussxw(N)
 
 """La siguiente instrucción sirve para escalar los resultados en el rango de la integral"""
-xw_escalado = gaussxwab(1,3, xw[0],xw[1])
+xw_escalado = gaussxwab(a,b, xw[0],xw[1])
 
 """Aquí se crea la función y se evalua la integral""" 
 def func(x):
@@ -48,7 +48,7 @@ def sumatoria(xw_escalado, func):
 print(sumatoria(xw_escalado, func))
 """
 Algunos ejemplos son:
-    >>>from cuadratura import cuadratura
+    >>>from cuadratura import cuadrature
     >>>xw = gaussxw(4)
     317.3453903341579
     >>>xw = gaussxw(5)
