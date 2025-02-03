@@ -9,21 +9,31 @@ La idea principal está dada por
 \int_{a^b} {\rm{d}}x f(x) \approx \sum_{k=1}^{N+1} w_{k} f(x_{k}).
 \end{align}
 donde:
+
   * $w_{k}$ son los "pesos"
+
   * $x_{k}$ son los puntos de muestreo. Nótese que usamos $N+1$ puntos (es decir, $N$ subregiones o subintervalos)
   
 Para las ecuaciones de Newton-Cotes de la clase anterior:  
+
   * Los puntos de muestreo son **equidistantes**.
+
   * Una ecuación de Newton-Cotes de orden $N$ es *exacta* (i.e., no hay aproximación) para un polinomio de grado $N$.
+
   * Un polinomio de orden $N$ aproxima una función bien comportada mejor que un polinomio de orden $N-1$, debido al grado de libertad añadido.
   
 Por el otro lado, para la cuadratura Gaussiana:
+
   * Los puntos de muestreo se escogen de manera tal que **no son equidistantes**. Esto introduce más grados de libertad para la misma discretización en $N$ subregiones.
+
   * Es exacta para un polinomio de orden $(2N - 1)$.
+
   * Es decir, la cuadratura Gaussiana da la misma precisión que un polinomio de orden $(2N - 1)$.
 
 Existe una **regla universal para escoger $w_k$ y $x_k$**. Los pesos y puntos de muestreo se eligen tal que:
+
   * $x_{k}$ corresponden a las $N$ raíces (ceros) de los polinomios de Legendre $P_{N}(x)$ de orden $N$.
+
   * Los pesos se eligen tal que:
       - $\displaystyle w_{k} = \left[\frac{2}{1-x^2}\left(\frac{dP_{N}}{dx}\right)^{-2}\right]_{x={x_k}}$, con $x_k$ que cumple $P_N(x_k)=0$
 
